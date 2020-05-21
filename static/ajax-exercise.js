@@ -3,11 +3,13 @@
 // Part 1
 
 $('#get-fortune-button').on('click', () => {
-  $.get('/replaceMe', (response) => {
+  $.get('/fortune', (response) => {
     //
     // This is the body of the callback function for $.get!
     // TODO: use `response` to update the text in `div#fortune-text`
     //
+    const fortuneText = document.querySelector('div#fortune-text');
+    fortuneText.innerHTML = response;
   });
 });
 
